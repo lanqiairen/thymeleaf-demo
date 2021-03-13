@@ -1,0 +1,4 @@
+#在使用thymeleaf生成HTML的时候是否关闭缓存
+spring:
+  thymeleaf:
+    cache: false

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试片段</title>
+</head>
+<body>
+<!--加载片段-->
+<div th:insert="~{footer :: copy}"></div>
+<hr>
+<div th:replace="~{footer :: copy}"></div>
+<hr>
+<div th:include="~{footer :: copy}"></div>
+</body>
+</html>

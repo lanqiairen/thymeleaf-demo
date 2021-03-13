@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试thymeleaf</title>
+    <link rel="stylesheet" type="text/css" href="css/test.css" th:href="@{/css/test.css}">
+</head>
+<body>
+<!--入门案例-->
+<p>显示键值对中的值<span th:text="${name}"></span></p>
+<hr>
+<!--实体类模型操作-->
+<p>id-<span th:text="${user.uid}"></span></p>
+<p>name-<span th:text="${user.uname}"></span></p>
+<hr>
+<!--map类型数据操作-->
+<img th:src="${imageMap[key1]}" width="50%">
+<hr>
+<!--实现集合的遍历-->
+<p th:each="u,iterStat : ${list}">
+    <span th:text="${iterStat.index}"></span>
+    <span th:text="${u.uid}"></span>
+    <span th:text="${u.uname}"></span>
+</p>
+<hr>
+<!--字符串拼接-->
+<p th:text="'大汉皇叔'+${username}+'来也'"></p>
+<p th:text="|大汉皇叔${username}来也|"></p>
+<hr>
+<!--实现判断选择操作-->
+<p th:if="${flag == 'n'}">判断成立则显示</p>
+<p th:unless="${flag == 'n'}">判断不成立时显示</p>
+<div th:switch="${flag}">
+    <p th:case="'y'">如果flag值为y，则此行显示</p>
+    <p th:case="'n'">如果flag值为n，则此行显示</p>
+</div>
+
+<hr>
+<!--内置对象操作-->
+<p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></p>
+<p th:text="${#numbers.formatDecimal(num,2,2)}"></p>
+<p th:text="${#strings.abbreviate(desc,60)}"></p>
+
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
